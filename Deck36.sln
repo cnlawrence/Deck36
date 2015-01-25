@@ -3,8 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deck36.Web", "Deck36.Web\Deck36.Web.csproj", "{E48D0187-0261-4845-AA3E-86DD07BDF90D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Specs", "Specs", "{DEFE69EE-9F27-46D8-9649-E60179A7AD76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deck36.UnitSpecs", "Deck36.UnitSpecs\Deck36.UnitSpecs.csproj", "{A76DF9E4-E68E-4666-938E-E48BE698693A}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E48D0187-0261-4845-AA3E-86DD07BDF90D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E48D0187-0261-4845-AA3E-86DD07BDF90D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E48D0187-0261-4845-AA3E-86DD07BDF90D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E48D0187-0261-4845-AA3E-86DD07BDF90D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A76DF9E4-E68E-4666-938E-E48BE698693A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A76DF9E4-E68E-4666-938E-E48BE698693A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A76DF9E4-E68E-4666-938E-E48BE698693A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A76DF9E4-E68E-4666-938E-E48BE698693A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A76DF9E4-E68E-4666-938E-E48BE698693A} = {DEFE69EE-9F27-46D8-9649-E60179A7AD76}
 	EndGlobalSection
 EndGlobal
