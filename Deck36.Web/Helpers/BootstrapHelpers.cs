@@ -3,6 +3,7 @@ using System.Linq.Expressions;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
+using HtmlTags;
 
 namespace Deck36.Web.Helpers
 {
@@ -22,6 +23,14 @@ namespace Deck36.Web.Helpers
             {
                 @class = "col-md-2 control-label"
             });
+        }
+
+        public static HtmlTag BootstrapSubmitButton(this HtmlHelper helper, string text)
+        {
+            return new HtmlTag("button")
+                .Attr("type","submit")
+                .AddClasses("btn", "btn-primary")
+                .Text(text);
         }
     }
 }
