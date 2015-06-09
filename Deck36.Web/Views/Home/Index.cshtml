@@ -8,7 +8,25 @@
 </div>
 
 <div class="row">
-    <form class="form-horizontal">
-        @Html.EditorForModel()
-    </form>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Helpers
+        </div>
+
+        <div class="panel-body">
+            <form class="form-horizontal">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <h4>BootstrapLabelFor</h4>
+                        @Html.BootstrapLabelFor(m => m.FirstName)
+                        @Html.EditorFor(m => m.FirstName)
+                    </div>
+                    <div class="form-group">
+                        <h4>BootstrapSubmitButton</h4>
+                        @Html.BootstrapSubmitButton("Submit!")
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>

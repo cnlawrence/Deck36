@@ -9,12 +9,14 @@ namespace Deck36.Web.Helpers
 {
     public static class BootstrapHelpers
     {
-        public static IHtmlString BootstrapLabelFor<TModel, TProp>(this HtmlHelper<TModel> helper, Expression<Func<TModel, TProp>> property  )
+        public static HtmlTag BootstrapLabelFor<TModel, TProp>(this HtmlHelper<TModel> helper, Expression<Func<TModel, TProp>> property  )
         {
-            return helper.LabelFor(property, new
-            {
-                @class = "col-md-2 control-label"
-            });
+            var name = helper.NameFor(property).ToString();
+
+            return new HtmlTag("label")
+                .Attr("for",name)
+                .AddClasses("col-md-2","control-label")
+                .Text(name);
         }
 
         public static IHtmlString BootstrapLabel(this HtmlHelper helper, string propertyName)

@@ -27,6 +27,30 @@ namespace Deck36.UnitSpecs.Web.Helpers
             }
         }
 
+        public class when_creating_a_bootstrap_label_for : SpecsFor<FakeHtmlHelper<dynamic>>
+        {
+            private HtmlTag _label;
+            
+            protected override void When()
+            {
+                var model = new {FirstName = "Geordi"};
+                _label = SUT.BootstrapLabelFor(m => model.FirstName);
+            }
+
+            [Test]
+            public void then_it_creates_label()
+            {
+                _label.Attr("for").ShouldEqual("FirstName");
+            }
+
+            [Test]
+            public void then_it_sets_the_correct_label_classes()
+            {
+                _label.HasClass("col-md-2").ShouldBeTrue();
+                _label.HasClass("control-label").ShouldBeTrue();
+            }
+        }
+
         public class when_creating_a_bootstrap_submit_button : SpecsFor<FakeHtmlHelper>
         {
             private HtmlTag _button;
