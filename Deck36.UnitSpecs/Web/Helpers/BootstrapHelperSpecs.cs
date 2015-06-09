@@ -13,7 +13,7 @@ namespace Deck36.UnitSpecs.Web.Helpers
     {
         public class when_creating_a_bootstrap_label : SpecsFor<FakeHtmlHelper>
         {
-            private IHtmlString _label;
+            private HtmlTag _label;
 
             protected override void When()
             {
@@ -23,7 +23,14 @@ namespace Deck36.UnitSpecs.Web.Helpers
             [Test]
             public void then_it_creates_label()
             {
-                _label.ToHtmlString();
+                _label.Attr("for").ShouldEqual("FirstName");
+            }
+
+            [Test]
+            public void then_it_sets_the_correct_label_classes()
+            {
+                _label.HasClass("col-md-2").ShouldBeTrue();
+                _label.HasClass("control-label").ShouldBeTrue();
             }
         }
 

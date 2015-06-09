@@ -19,12 +19,12 @@ namespace Deck36.Web.Helpers
                 .Text(name);
         }
 
-        public static IHtmlString BootstrapLabel(this HtmlHelper helper, string propertyName)
+        public static HtmlTag BootstrapLabel(this HtmlHelper helper, string propertyName)
         {
-            return helper.Label(propertyName, new
-            {
-                @class = "col-md-2 control-label"
-            });
+            return new HtmlTag("label")
+                .Attr("for", propertyName)
+                .AddClasses("col-md-2", "control-label")
+                .Text(propertyName);
         }
 
         public static HtmlTag BootstrapSubmitButton(this HtmlHelper helper, string text)
